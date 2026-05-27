@@ -12,12 +12,29 @@ html, body, #root {
   overflow: hidden; /* Triệt tiêu thanh cuộn tổng của trình duyệt */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-html, body {
+/* Tối ưu bộ khung hiển thị để không bị ảnh hưởng bởi Windows Scale thô */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
+/* Hạ nhẹ cỡ chữ của toàn bộ bảng DataGrid xuống 13px cho thanh mảnh */
 .MuiDataGrid-root {
-  font-size: 13px !important; 
+  font-size: 13px !important;
+}
+
+/* Thu nhỏ các icon hành động (mắt, bút chì, thùng rác) để không bị to thô */
+.MuiDataGrid-cell .MuiIconButton-root {
+  padding: 4px !important;
+}
+.MuiDataGrid-cell .MuiSvgIcon-root {
+  font-size: 18px !important;
+}
+
+/* Thu nhỏ bớt độ rộng các menu Sidebar bên trái nếu cảm thấy chiếm diện tích */
+.MuiListItemButton-root {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
 }

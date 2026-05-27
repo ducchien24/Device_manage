@@ -30,7 +30,8 @@ export default function AssetDataGrid({
         slots={{ toolbar: () => <CustomToolbar onExport={onExport} /> }}
         disableRowSelectionOnClick
         density="compact"
-        rowHeight={45}
+        rowHeight={38}
+        columnHeaderHeight={40}
         processRowUpdate={processRowUpdate}
         experimentalFeatures={{ newEditingApi: true }}
         sx={{
